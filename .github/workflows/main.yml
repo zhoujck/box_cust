@@ -16,4 +16,4 @@ jobs:
     - name: Build the Docker image
       env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-      run: docker run --rm  -e username=xxx -e token=xxx -e url='http://肥猫.com?&signame=肥猫,http://www.饭太硬.com/tv/?&signame=饭太硬' 2011820123/tvbox
+      run: docker run --rm  -e repo=config -e username=zhoujck -e token=mirro -e url='http://肥猫.com?&signame=肥猫,http://www.饭太硬.com/tv/?&signame=饭太硬' 2011820123/tvbox
