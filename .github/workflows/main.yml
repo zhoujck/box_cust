@@ -1,37 +1,19 @@
-name: 优质源
+name: Docker Image CI
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:    
+  - cron: "0 2 * * *"
 
 jobs:
+
   build:
+
     runs-on: ubuntu-latest
-    env:
-     TZ: Asia/Shanghai
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-    
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-
-      - name: Install dependencies
-        run: pip install selenium requests futures eventlet
-
-      - name: Run main.py
-        run: python ${{ github.workspace }}/tvbox_tools.py
-     
-        
-      - name: 提交更改
-        run: |
-
-          git config user.email "zhoujck@live.com"
-          git config user.name "zhoujck" 
-          git add .
-          git commit -m "action: `date`"
-          git push -f
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      run: docker run --rm  -e username=xxx -e token=xxx -e url='http://肥猫.com?&signame=肥猫,http://www.饭太硬.com/tv/?&signame=饭太硬' 2011820123/tvbox
