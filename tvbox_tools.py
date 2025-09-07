@@ -32,11 +32,11 @@ class GetSrc:
         self.mirror_proxy = 'https://ghp.ci/https://raw.githubusercontent.com'
         self.num = int(num)
         self.sep = os.path.sep
-        self.username = zhoujck
+        self.username = 'zhoujck'
         self.token = token
         self.timeout=timeout
-        self.url = https://framagit.org/zhoujck/config/-/raw/main/api
-        self.repo = box_cust
+        self.url = 'https://framagit.org/zhoujck/config/-/raw/main/api'
+        self.repo = 'box_cust'
         self.target = f'{target.split(".json")[0]}.json' if target else 'tvbox.json'
         self.headers = {"user-agent": "okhttp/3.15 Html5Plus/1.0 (Immersed/23.92157)"}
         self.s = requests.Session()
