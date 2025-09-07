@@ -21,7 +21,7 @@ jobs:
           python-version: 3.x
 
       - name: Install dependencies
-        run: pip install selenium requests futures eventlet requests==2.31.0 requests-html==0.10.0
+        run: pip install requests==2.31.0 requests-html==0.10.0
 
       - name: Run tvbox_tools.py.py
         run: python ${{ github.workspace }}/tvbox_tools.py
