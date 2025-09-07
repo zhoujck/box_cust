@@ -7,7 +7,7 @@ import string
 import time
 import hashlib
 import json
-import git  # gitpython
+#import git  # gitpython
 import re
 import base64
 import requests
