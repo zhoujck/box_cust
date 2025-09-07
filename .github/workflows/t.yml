@@ -24,7 +24,7 @@ jobs:
         run: pip install selenium requests futures eventlet
 
       - name: Run tvbox_tools.py.py
-        run: python ${{ github.workspace }}/tvbox_tools.py.py
+        run: python ${{ github.workspace }}/tvbox_tools.py
      
         
       - name: 提交更改
