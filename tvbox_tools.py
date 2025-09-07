@@ -24,18 +24,6 @@ urllib3.disable_warnings(InsecureRequestWarning)
 global pipes
 pipes = set()
 
-username=None
-
-token=''
-url=''
-repo=''
-num=10
-target=''
-timeout=3
-signame=''
-mirror=''
-jar_suffix=''
-
 class GetSrc:
     def __init__(self, username=None, token=None, url=None, repo=None, num=10, target=None, timeout=3, signame=None, mirror=None, jar_suffix=None):
         self.jar_suffix = jar_suffix if jar_suffix else 'jar'
