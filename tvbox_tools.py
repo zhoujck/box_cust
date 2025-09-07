@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 # !/usr/bin/env python3
+
+pip install requests-html
 from requests_html import HTMLSession
 import pprint
 import random
